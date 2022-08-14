@@ -192,7 +192,6 @@ func getUserQuestions(email string) *model.Registred_user {
 
 	if response.StatusCode == http.StatusOK {
 		body, _ := io.ReadAll(response.Body)
-		fmt.Println(string(body))
 
 		err := json.Unmarshal([]byte(body), &user)
 
